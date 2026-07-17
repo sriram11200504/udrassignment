@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --udr-yellow: #ffbf00;
+}
+
+/* Base background */
+body{ @apply bg-gray-50 }
+
+/* Small helper classes matching the UdrCrafts style */
+.bg-udr-yellow{ background-color: var(--udr-yellow) }
+.text-udr-yellow{ color: var(--udr-yellow) }
+.border-udr-yellow{ border-color: var(--udr-yellow) }
+
+.focus\:ring-udr-yellow:focus{ box-shadow: 0 0 0 3px rgba(255,191,0,0.2) }
+
+/* Utility aliases used in components */
+.focus\:ring-udr-yellow:focus,
+.focus\:border-udr-yellow:focus{ outline: none }
+
+.bg-udr-yellow-50{ background-color: #fff8ea }
+
+/* Landing-specific tweaks */
+.udr-hero-title { font-weight: 800 }
+.udr-card { border-radius: 12px }
+
+/* Vertical card helpers */
+.udr-card { @apply bg-white border shadow-sm rounded-xl p-5 }
+.udr-cta { @apply w-full py-2 px-3 bg-black text-white rounded-full text-sm }
+
+/* Spacing for stacked cards */
+@media (min-width: 768px) {
+  .max-w-3xl { max-width: 900px }
+}
+
+/* Footer small on mobile */
+@media (max-width: 640px) {
+  .udr-hero-title { font-size: 28px }
+}
