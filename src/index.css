@@ -1,41 +1,168 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@reference "tailwindcss";
 
-:root{
+:root {
   --udr-yellow: #ffbf00;
+  --udr-yellow-dark: #d19c00;
 }
 
-/* Base background */
-body{ @apply bg-gray-50 }
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-/* Small helper classes matching the UdrCrafts style */
-.bg-udr-yellow{ background-color: var(--udr-yellow) }
-.text-udr-yellow{ color: var(--udr-yellow) }
-.border-udr-yellow{ border-color: var(--udr-yellow) }
+  body {
+    @apply min-h-screen bg-white text-slate-950 antialiased;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-image: none;
+  }
 
-.focus\:ring-udr-yellow:focus{ box-shadow: 0 0 0 3px rgba(255,191,0,0.2) }
+  * {
+    box-sizing: border-box;
+  }
 
-/* Utility aliases used in components */
-.focus\:ring-udr-yellow:focus,
-.focus\:border-udr-yellow:focus{ outline: none }
-
-.bg-udr-yellow-50{ background-color: #fff8ea }
-
-/* Landing-specific tweaks */
-.udr-hero-title { font-weight: 800 }
-.udr-card { border-radius: 12px }
-
-/* Vertical card helpers */
-.udr-card { @apply bg-white border shadow-sm rounded-xl p-5 }
-.udr-cta { @apply w-full py-2 px-3 bg-black text-white rounded-full text-sm }
-
-/* Spacing for stacked cards */
-@media (min-width: 768px) {
-  .max-w-3xl { max-width: 900px }
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
 }
 
-/* Footer small on mobile */
-@media (max-width: 640px) {
-  .udr-hero-title { font-size: 28px }
+@layer components {
+  .udr-card {
+    border-radius: 32px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background-color: rgba(15,23,42,0.9);
+    padding: 1.5rem;
+    box-shadow: 0 40px 120px -50px rgba(15,23,42,0.72);
+    backdrop-filter: blur(16px);
+  }
+
+  .udr-hero-panel {
+    border-radius: 36px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background-color: rgba(15,23,42,0.95);
+    padding: 2rem;
+    box-shadow: 0 44px 140px -55px rgba(15,23,42,0.75);
+    backdrop-filter: blur(18px);
+  }
+
+  .udr-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: var(--udr-yellow);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    box-shadow: 0 20px 60px -20px rgba(255,191,0,0.72);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+  }
+
+  .udr-cta:hover {
+    background-color: #f7c200;
+    transform: translateY(-1px);
+  }
+
+  .udr-cta:focus-visible {
+    outline: 3px solid rgba(255,191,0,0.35);
+    outline-offset: 2px;
+  }
+
+  .udr-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(148,163,184,0.35);
+    background-color: rgba(15,23,42,0.9);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .udr-secondary-btn:hover {
+    background-color: rgba(15,23,42,1);
+    transform: translateY(-1px);
+  }
+
+  .udr-input {
+    margin-top: 0.25rem;
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid rgba(71,85,105,0.8);
+    background-color: rgba(15,23,42,0.95);
+    padding: 0.75rem 1rem;
+    color: #f8fafc;
+    box-shadow: 0 10px 30px -15px rgba(15,23,42,0.65);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .udr-input:focus {
+    border-color: var(--udr-yellow);
+    box-shadow: 0 0 0 8px rgba(255,191,0,0.18);
+    outline: none;
+  }
+
+  .udr-section-title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .udr-step-badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    background-color: rgba(15,23,42,0.9);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #cbd5e1;
+  }
+
+  .udr-feature-card {
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background-color: rgba(15,23,42,0.9);
+    padding: 1.5rem;
+    box-shadow: 0 24px 80px -40px rgba(15,23,42,0.55);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .udr-feature-card:hover {
+    transform: translateY(-3px);
+    background-color: rgba(15,23,42,0.95);
+  }
+}
+
+@layer utilities {
+  .bg-udr-yellow {
+    background-color: var(--udr-yellow);
+  }
+
+  .text-udr-yellow {
+    color: var(--udr-yellow);
+  }
+
+  .border-udr-yellow {
+    border-color: var(--udr-yellow);
+  }
+
+  .bg-udr-yellow-50 {
+    background-color: #fff8ea;
+  }
+
+  .focus\:ring-udr-yellow:focus {
+    box-shadow: 0 0 0 3px rgba(255,191,0,0.2);
+  }
 }

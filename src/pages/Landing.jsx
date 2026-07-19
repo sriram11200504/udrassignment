@@ -2,57 +2,48 @@ import React from 'react'
 
 export default function Landing({ onProceed }) {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 bg-udr-yellow-50">
-      <div className="w-full max-w-3xl">
-        <div className="bg-udr-yellow rounded-xl px-6 py-6 text-center shadow-md">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-black udr-hero-title">Welcome to UdrCrafts®</h1>
-        </div>
-
-        <div className="mt-6 space-y-6">
-          <p className="text-center text-gray-700">Choose how you want to continue — download the mobile app, explore the product webpage, open the seller panel, or search for nearby UdrCrafts shops around your location.</p>
-
-          {/* Card 1 */}
-          <div className="udr-card bg-white p-5 shadow-sm border">
-            <h3 className="text-lg font-semibold">Download app</h3>
-            <p className="text-sm text-gray-600 mt-2">Mobile shopping experience</p>
-            <div className="mt-4">
-              <button aria-label="View app download page" className="udr-cta">View app download page</button>
+    <div className="min-h-screen bg-white text-slate-950">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-12 sm:px-8">
+        <header className="udr-hero-panel">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">Partner login and onboarding for UdrCrafts.</h1>
+            <p className="mt-5 text-lg leading-8 text-slate-300">Sign in, verify your email, and finish your profile in a clean flow.</p>
+            <div className="mt-8">
+              <button onClick={onProceed} className="udr-cta">Partner login</button>
             </div>
           </div>
+        </header>
 
-          {/* Card 2 */}
-          <div className="udr-card bg-white p-5 shadow-sm border">
-            <h3 className="text-lg font-semibold">Visit site</h3>
-            <p className="text-sm text-gray-600 mt-2">Explore UdrCrafts online</p>
-            <div className="mt-4">
-              <button aria-label="Open udrcrafts.com" className="udr-cta">Open udrcrafts.com</button>
-            </div>
+        <section className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="udr-feature-card">
+            <h2 className="text-xl font-semibold text-white">Sign in</h2>
+            <p className="mt-3 text-sm text-slate-400">Start with your partner credentials.</p>
           </div>
-
-          {/* Card 3 */}
-          <div className="udr-card bg-white p-5 shadow-sm border">
-            <h3 className="text-lg font-semibold">Seller panel</h3>
-            <p className="text-sm text-gray-600 mt-2">Explore seller tools</p>
-            <div className="mt-4">
-              <button aria-label="Open seller panel" className="udr-cta">Open seller.udrcrafts.com</button>
-            </div>
+          <div className="udr-feature-card">
+            <h2 className="text-xl font-semibold text-white">Verify</h2>
+            <p className="mt-3 text-sm text-slate-400">Confirm your email before continuing.</p>
           </div>
-
-          {/* Card 4 */}
-          <div className="udr-card bg-white p-5 shadow-sm border">
-            <h3 className="text-lg font-semibold">Find nearby shops</h3>
-            <p className="text-sm text-gray-600 mt-2">Locate UdrCrafts around you</p>
-            <div className="mt-4">
-              <button aria-label="Search shops near me" className="udr-cta">Search registered shops near me</button>
-            </div>
+          <div className="udr-feature-card">
+            <h2 className="text-xl font-semibold text-white">Profile</h2>
+            <p className="mt-3 text-sm text-slate-400">Add a company name and contact details.</p>
           </div>
-
-          <div className="text-center mt-2">
-            <button onClick={onProceed} className="inline-block px-4 py-2 bg-udr-yellow text-black font-medium rounded-md">Partner login</button>
+          <div className="udr-feature-card">
+            <h2 className="text-xl font-semibold text-white">Complete</h2>
+            <p className="mt-3 text-sm text-slate-400">Finish setup and access partner tools.</p>
           </div>
+        </section>
 
-          <div className="text-center text-sm text-gray-500 mt-2">© UdrCrafts®. All rights reserved.</div>
-        </div>
+        <section className="udr-card grid gap-6 lg:grid-cols-[1.35fr_0.9fr] items-center">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-slate-500">How it works</p>
+            <h2 className="mt-3 text-3xl font-bold text-white">A straightforward partner flow.</h2>
+            <p className="mt-4 text-slate-300">Sign in, verify your email, and complete your profile in a clean sequence.</p>
+          </div>
+          <div className="rounded-[24px] border border-white/10 bg-slate-900/80 p-6 text-slate-300">
+            <h3 className="text-xl font-semibold text-white">Get started</h3>
+            <p className="mt-3 text-sm">Press the login button and move through the portal step by step.</p>
+          </div>
+        </section>
       </div>
     </div>
   )
