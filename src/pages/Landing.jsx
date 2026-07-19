@@ -28,22 +28,30 @@ export default function Landing({ onProceed }) {
           </div>
         </section>
 
-        <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <div className="udr-feature-card border-l-4 border-amber-400/90">
-            <h2 className="text-xl font-semibold text-slate-950">Sign in</h2>
-            <p className="mt-3 text-sm text-slate-600">Start with your partner credentials and jump into the onboarding flow.</p>
-          </div>
-          <div className="udr-feature-card border-l-4 border-sky-500/90">
-            <h2 className="text-xl font-semibold text-slate-950">Verify</h2>
-            <p className="mt-3 text-sm text-slate-600">Confirm your email quickly so you can move on to setup.</p>
-          </div>
-          <div className="udr-feature-card border-l-4 border-emerald-500/90">
-            <h2 className="text-xl font-semibold text-slate-950">Profile</h2>
-            <p className="mt-3 text-sm text-slate-600">Complete your business profile with company and contact details.</p>
-          </div>
-          <div className="udr-feature-card border-l-4 border-violet-500/90">
-            <h2 className="text-xl font-semibold text-slate-950">Complete</h2>
-            <p className="mt-3 text-sm text-slate-600">Finish setup and access the full partner dashboard with confidence.</p>
+        <section className="udr-card">
+          <div className="flex flex-col gap-6">
+            <div className="border-b border-slate-200 pb-5">
+              <p className="text-sm uppercase tracking-[0.3em] text-amber-500">Onboarding flow</p>
+              <h2 className="mt-2 text-3xl font-bold text-slate-950">Get started in four easy steps</h2>
+              <p className="mt-3 text-slate-600">Follow this guided workflow to onboard quickly and confidently.</p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2">
+              <div className="udr-feature-card border-l-4 border-amber-400/90">
+                <h2 className="text-xl font-semibold text-slate-950">Sign in</h2>
+                <p className="mt-3 text-sm text-slate-600">Start with your partner credentials and jump into the onboarding flow.</p>
+              </div>
+            <div className="udr-feature-card border-l-4 border-sky-500/90">
+              <h2 className="text-xl font-semibold text-slate-950">Verify</h2>
+              <p className="mt-3 text-sm text-slate-600">Confirm your email quickly so you can move on to setup.</p>
+            </div>
+            <div className="udr-feature-card border-l-4 border-emerald-500/90">
+              <h2 className="text-xl font-semibold text-slate-950">Profile</h2>
+              <p className="mt-3 text-sm text-slate-600">Complete your business profile with company and contact details.</p>
+            </div>
+            <div className="udr-feature-card border-l-4 border-violet-500/90">
+              <h2 className="text-xl font-semibold text-slate-950">Complete</h2>
+              <p className="mt-3 text-sm text-slate-600">Finish setup and access the full partner dashboard with confidence.</p>
+            </div>
           </div>
         </section>
 
