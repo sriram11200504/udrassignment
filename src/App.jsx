@@ -18,37 +18,36 @@ export default function App() {
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             <section className="udr-hero-panel">
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <span className="udr-step-badge">Partner access</span>
-                <span className="text-sm text-slate-400">Secure portal • 24/7 support</span>
+                <span className="text-sm text-slate-500">Secure portal • 24/7 support</span>
               </div>
-              <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">A smarter partner dashboard for shipping and seller growth.</h1>
-              <p className="mt-5 max-w-xl text-slate-300">Use the portal to verify your account, set up your partner profile, and access shipping tools in one polished interface.</p>
+              <h1 className="mt-8 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">A smarter partner dashboard for shipping and seller growth.</h1>
+              <p className="mt-5 max-w-xl text-slate-600">Use the portal to verify your account, set up your partner profile, and access shipping tools in one polished interface.</p>
 
-              <div className="mt-10 space-y-4 rounded-[28px] border border-white/10 bg-slate-950/80 p-6 shadow-[0_40px_80px_-50px_rgba(15,23,42,0.5)]">
-                <div className="flex items-center gap-3">
-                  
+              <div className="mt-10 space-y-4 rounded-[28px] border border-slate-200 bg-slate-50/90 p-6 shadow-[0_24px_60px_-24px_rgba(15,23,42,0.08)]">
+                <div className="flex items-start gap-3">
                   <div>
-                    <p className="text-sm font-semibold text-white">Instant partner onboarding</p>
-                    <p className="text-sm text-slate-400">Secure verification and profile setup in minutes.</p>
+                    <p className="text-sm font-semibold text-slate-950">Instant partner onboarding</p>
+                    <p className="text-sm text-slate-600">Secure verification and profile setup in minutes.</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-start gap-3">
                   <div>
-                    <p className="text-sm font-semibold text-white">Actionable insights</p>
-                    <p className="text-sm text-slate-400">Track partner activity and seller performance inside the portal.</p>
+                    <p className="text-sm font-semibold text-slate-950">Actionable insights</p>
+                    <p className="text-sm text-slate-600">Track partner activity and seller performance inside the portal.</p>
                   </div>
                 </div>
               </div>
             </section>
 
             <section className="udr-card">
-              <div className="flex items-center justify-between gap-4">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Partner steps</p>
-                  <h2 className="mt-3 text-2xl font-semibold text-white">Continue with your account</h2>
+                  <p className="text-sm uppercase tracking-[0.3em] text-slate-500">Partner steps</p>
+                  <h2 className="mt-3 text-2xl font-semibold text-slate-950">Continue with your account</h2>
                 </div>
-                <div className="rounded-2xl bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200">Secure</div>
+                <div className="rounded-2xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-950">Secure</div>
               </div>
 
               <div className="mt-8 text-slate-400">
@@ -62,7 +61,7 @@ export default function App() {
             </section>
           </div>
 
-          <div className="mt-6 rounded-[32px] border border-white/10 bg-slate-950/90 p-6 shadow-[0_40px_120px_-50px_rgba(15,23,42,0.6)] backdrop-blur-xl">
+          <div className="mt-6 rounded-[32px] border border-slate-200 bg-slate-50/95 p-6 shadow-[0_24px_80px_-32px_rgba(15,23,42,0.08)] backdrop-blur-xl">
             {flow.step === 'login' && (
               <Login onVerifyRequested={(email) => setFlow({ step: 'verify', email })} />
             )}
